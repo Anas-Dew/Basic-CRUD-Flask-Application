@@ -2,7 +2,7 @@ from flask import Flask, jsonify, make_response, request
 from flask_mongoengine import MongoEngine
 
 # Initailizing Objects Which Requried to Make App Run
-mongo_atlas_connection_string = "mongodb+srv://public_user:ExBRARE7qbnPSZNu@copywordbase.pya1y.mongodb.net/Test?retryWrites=true&w=majority"
+mongo_atlas_connection_string = "mongodb+srv://<myusername>:<mypassword>@copywordbase.pya1y.mongodb.net/Test?retryWrites=true&w=majority"
 
 my_app = Flask(__name__)
 my_app.config['MONGODB_HOST'] = mongo_atlas_connection_string
