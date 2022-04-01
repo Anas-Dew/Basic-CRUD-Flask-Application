@@ -28,6 +28,10 @@ Mongo Atlas
 
 Update Object in server using 'PUT' method with this "/Mobile/updateMobile/<modelName>" Endpoint
 
-![alt text](https://github.com/Anas-Dewsic-CRUD-Flask-Application/blob/main/postman_add_one.png "POstman update one")
+![alt text](https://github.com/Anas-Dew/Basic-CRUD-Flask-Application/blob/main/postman_update.png "POstman update one")
+ 
+ Mongo Atlas
+ 
+ ![alt text](https://github.com/Anas-Dew/Basic-CRUD-Flask-Application/blob/main/mongo_update.png "Mongo")
 
 
