@@ -61,6 +61,7 @@ def add_new_mobile():
     return make_response('Object added to server',200)
 
 @my_app.route('/Mobile/updateMobile/<modelName>', methods=['PUT'])
+
 def update_an_existing_mobile(modelName):
     classMobile = Mobile()
     contenttype = request.json
@@ -70,6 +71,7 @@ def update_an_existing_mobile(modelName):
     return make_response("Update Success", 204)
 
 @my_app.route('/Mobile/deleteMobile/<modelName>', methods=['DELETE'])
+
 def delete_mobile(modelName):
     mobile = Mobile.objects(mobile_model=modelName).first()
     if mobile :
@@ -81,13 +83,6 @@ def delete_mobile(modelName):
 
 
 
-
-
-
-
-
-
-
 if __name__ == "__main__" :
     my_app.run(debug=True)
-    pass
+    
