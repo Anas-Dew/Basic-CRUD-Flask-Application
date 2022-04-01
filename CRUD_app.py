@@ -52,9 +52,9 @@ def see_a_specific_mobile(modelName):
 
 def add_new_mobile():
 
-    new_mobile = Mobile(mobile_brand="Apple",
-                            mobile_model="iphone 12",
-                            mobile_price=120000)
+    new_mobile = Mobile(mobile_brand="Samsung",
+                            mobile_model="S10",
+                            mobile_price=79000)
 
     new_mobile.save()
 
@@ -63,11 +63,10 @@ def add_new_mobile():
 @my_app.route('/Mobile/updateMobile/<modelName>', methods=['PUT'])
 
 def update_an_existing_mobile(modelName):
-    classMobile = Mobile()
+    
     contenttype = request.json
-    mobile = classMobile.objects(mobile_model=modelName).first()
-    # mobile = classMobile.update(mobile_price=contenttype['mobile_price'])
-
+    mobile = Mobile.objects(mobile_model=modelName).first()
+    mobile.update(mobile_price=contenttype['mobile_price'])
     return make_response("Update Success", 204)
 
 @my_app.route('/Mobile/deleteMobile/<modelName>', methods=['DELETE'])
